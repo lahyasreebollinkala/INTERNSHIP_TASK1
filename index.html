@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Ultimate Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Loader -->
+
+    <div id="loader">
+        Loading...
+    </div>
+
+    <!-- Particles -->
+
+    <div class="particles"></div>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <h1>Task Manager</h1>
+
+        <div class="nav-right">
+
+            <ul>
+
+                <li><a href="#hero">Home</a></li>
+
+                <li><a href="#todo">Tasks</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+            <button id="darkModeBtn">🌙</button>
+
+            <button id="musicBtn">🎵</button>
+
+        </div>
+
+    </nav>
+
+    <!-- Hero -->
+
+    <section class="hero" id="hero">
+
+        <div class="hero-content">
+
+            <h2 class="typing-text"></h2>
+
+            <p>
+                Organize your workflow and boost productivity
+                using this advanced task management system.
+            </p>
+
+            <a href="#todo">
+
+                <button>Get Started</button>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Quote -->
+
+    <div class="quote-box">
+
+        <h3 id="quote">
+            Stay productive!
+        </h3>
+
+    </div>
+
+    <!-- Main Container -->
+
+    <div class="container">
+
+        <!-- Contact Form -->
+
+        <section class="form-section hidden"
+                 id="contact">
+
+            <h2>Contact Form</h2>
+
+            <form id="contactForm">
+
+                <input type="text"
+                       id="name"
+                       placeholder="Enter Name">
+
+                <input type="email"
+                       id="email"
+                       placeholder="Enter Email">
+
+                <textarea id="message"
+                          placeholder="Enter Message"></textarea>
+
+                <button type="submit">
+                    Submit
+                </button>
+
+            </form>
+
+            <p id="formMessage"></p>
+
+        </section>
+
+        <!-- Todo -->
+
+        <section class="todo-section hidden"
+                 id="todo">
+
+            <h2>To-Do List</h2>
+
+            <!-- Search -->
+
+            <input type="text"
+                   id="searchTask"
+                   placeholder="Search Tasks">
+
+            <!-- Progress -->
+
+            <div class="progress-container">
+
+                <div id="progressBar"></div>
+
+            </div>
+
+            <!-- Todo Input -->
+
+            <div class="todo-input">
+
+                <input type="text"
+                       id="taskInput"
+                       placeholder="Enter Task">
+
+                <select id="priority">
+
+                    <option value="High">
+                        High
+                    </option>
+
+                    <option value="Medium">
+                        Medium
+                    </option>
+
+                    <option value="Low">
+                        Low
+                    </option>
+
+                </select>
+
+                <input type="date"
+                       id="dueDate">
+
+                <button onclick="addTask()">
+                    Add
+                </button>
+
+            </div>
+
+            <!-- Counter -->
+
+            <h3 id="taskCounter">
+                Total Tasks: 0
+            </h3>
+
+            <!-- Task List -->
+
+            <ul id="taskList"></ul>
+
+        </section>
+
+    </div>
+
+    <!-- Toast -->
+
+    <div id="toast"></div>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Ultimate Task Manager |
+            Built using HTML, CSS & JavaScript
+        </p>
+
+    </footer>
+
+    <!-- Music -->
+
+    <audio id="bgMusic" loop>
+
+        <source
+            src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+            type="audio/mp3">
+
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
